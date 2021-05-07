@@ -13,9 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/ ', 'HomeController@index');
+Route::get('/home', function (){
+    return view('home.home');
+});
+
+Route::get('/ ', [
+    'as' => 'home',
+    'uses' =>'HomeController@index'
+]);
 
 Route::get('/category/{id}', [
     'as' => 'category',
     'uses' => 'CategoryController@index'
+]);
+
+Route::get('/product-details/{id}', [
+    'as' => 'product-details',
+    'uses' => 'CategoryController@getDetail'
 ]);
