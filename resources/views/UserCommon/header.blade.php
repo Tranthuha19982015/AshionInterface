@@ -51,7 +51,7 @@
                     </div>
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>
-                        <li><a href="#"><span class="icon_bag_alt"></span>
+                        <li><a href="{{route('cart')}}"><span class="icon_cart_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
                     </ul>
