@@ -13,11 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function (){
-    return view('home.home');
-});
-
-Route::get('/ ', [
+Route::get('/', [
     'as' => 'home',
     'uses' =>'HomeController@index'
 ]);
@@ -30,4 +26,19 @@ Route::get('/category/{id}', [
 Route::get('/product-details/{id}', [
     'as' => 'product-details',
     'uses' => 'CategoryController@getDetail'
+]);
+
+Route::post('/cart', [
+    'as' => 'cart',
+    'uses' => 'CartController@saveCart'
+]);
+
+Route::get('/login', [
+    'as' => 'login',
+    'uses' =>'HomeController@getLogin'
+]);
+
+Route::get('/register', [
+    'as' => 'register',
+    'uses' =>'HomeController@getRegister'
 ]);

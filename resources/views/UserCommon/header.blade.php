@@ -7,13 +7,13 @@
         <div class="row">
             <div class="col-xl-3 col-lg-2">
                 <div class="header__logo">
-                    <a href=""><img src="{{asset('ashionshop/img/logo.png')}}" alt=""></a>
+                    <a href="{{route('home')}}"><img src="{{asset('ashionshop/img/logo.png')}}" alt=""></a>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-7">
                 <nav class="header__menu">
                     <ul>
-                        <li class="active"><a href="">Trang chủ</a></li>
+                        <li class="active"><a href="{{route('home')}}">Trang chủ</a></li>
                         <li><a href="#">Sản phẩm</a>
 
                             <ul class="dropdown">
@@ -46,9 +46,10 @@
             <div class="col-lg-3">
                 <div class="header__right">
                     <div class="header__right__auth">
-                        <a href="#">Đăng nhập</a>
-                        <a href="#">Đăng ký</a>
+                        <a href="{{route('login')}}">Đăng nhập</a>
+                        <a href="{{route('register')}}">Đăng ký</a>
                     </div>
+
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>
                         <li><a href="{{route('cart')}}"><span class="icon_cart_alt"></span>

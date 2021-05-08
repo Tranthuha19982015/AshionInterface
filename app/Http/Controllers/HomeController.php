@@ -17,4 +17,14 @@ class HomeController extends Controller
         $products=Product::latest()->limit(8)->get();
         return view('home.home', compact('sliders', 'categorys','products'));
     }
+
+    public function getLogin(){
+        $categorys=Category::where('parent_id',0)->get();
+        return view('login_register.login',compact('categorys'));
+    }
+
+    public function getRegister(){
+        $categorys=Category::where('parent_id',0)->get();
+        return view('login_register.register',compact('categorys'));
+    }
 }
