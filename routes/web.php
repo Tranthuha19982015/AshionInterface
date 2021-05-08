@@ -42,3 +42,8 @@ Route::get('/register', [
     'as' => 'register',
     'uses' =>'HomeController@getRegister'
 ]);
+
+Route::post('/register', [
+    'as' => 'register',
+    'uses' =>'HomeController@postRegister'
+]);
