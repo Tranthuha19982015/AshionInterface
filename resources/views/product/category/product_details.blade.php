@@ -49,7 +49,7 @@
                         <h3>{{$product->name}}</h3>
 
                         <div class="product__details__price">{{@number_format($product->price,0)}} VND</div>
-                        <p>{{$product->content}}</p>
+{{--                        <p>{{$product->content}}</p>--}}
 
 {{--                        Them vao gio hang--}}
                         <form action="{{route('cart')}}" method="post">
@@ -122,7 +122,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <h6>Mô tả sản phẩm</h6>
-                                <p>{{$product->content}}</p>
+                                <p>{!! $product->content !!}}</p>
                             </div>
                         </div>
                     </div>

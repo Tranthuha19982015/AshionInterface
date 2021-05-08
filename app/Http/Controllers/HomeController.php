@@ -34,7 +34,7 @@ class HomeController extends Controller
 
     public function postRegister(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|max:20',
             'name' => 'required',
@@ -55,6 +55,6 @@ class HomeController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->back()->with('success','Tạo tài khoản thành công');
+        return redirect()->back()->with('success', 'Tạo tài khoản thành công');
     }
 }
