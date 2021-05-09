@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    <title>Trang chu</title>
+    <title>Gio hang</title>
 @endsection
 
 @section('css')
@@ -15,7 +15,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
                         <a href=""><i class="fa fa-home"></i> Trang chủ</a>
-                        <span>Shopping cart</span>
+                        <span>Giỏ hàng</span>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                             <tbody>
                             <tr>
                                 <td class="cart__product__item">
-                                    <img src="img/shop-cart/cp-1.jpg" alt="1234">
+                                    <img src="" alt="1234">
                                     <div class="cart__product__item__title">
                                         <h6>{{}}</h6>
                                     </div>
