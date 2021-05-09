@@ -38,6 +38,11 @@ Route::get('/login', [
     'uses' =>'HomeController@getLogin'
 ]);
 
+Route::post('/login', [
+    'as' => 'login',
+    'uses' =>'HomeController@postLogin'
+]);
+
 Route::get('/register', [
     'as' => 'register',
     'uses' =>'HomeController@getRegister'

@@ -7,6 +7,7 @@ use App\Product;
 use App\Slider;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -25,6 +26,28 @@ class HomeController extends Controller
         $categorys = Category::where('parent_id', 0)->get();
         return view('login_register.login', compact('categorys'));
     }
+
+    public function postLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required|min:6|max:20'
+        ], [
+            'email.required' => 'Email không được để trống',
+            'email.email' => 'Không đúng định dạng email',
+            'password.required' => 'Mật khẩu không được để trống',
+            'password.min' => 'Mật khẩu phải chứa ít nhất 6 ký tự!',
+            'password.max' => 'Mật khẩu không quá 20 ký tự'
+        ]);
+
+        $credentials = array('email' => $request->email, 'password' => $request->password);
+        if (Auth::attempt($credentials)) {
+            return redirect()->back()->with(['flag' => 'success', 'message' => 'Đăng nhập thành công']);
+        } else {
+            return redirect()->back()->with(['flag' => 'failed', 'message' => 'Đăng nhập thất bại']);
+        }
+    }
+
 
     public function getRegister()
     {

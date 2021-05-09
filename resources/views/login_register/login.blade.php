@@ -15,18 +15,26 @@
                     <div class="card">
                         <div class="card-header">Đăng nhập</div>
                         <div class="card-body">
-                            <form action="" method="">
+                            <form action="{{route('login')}}" method="post">
+                                @csrf
+                                {{--in thong bao--}}
+                                @if(Session::has('flag'))
+                                    <div class="alert alert-{{Session::get('flag')}}">
+                                        {{Session::get('message')}}
+                                    </div>
+                                @endif
+
                                 <div class="form-group row">
                                     <label class="col-md-4 col-form-label text-md-right">Địa chỉ email:</label>
                                     <div class="col-md-6">
-                                        <input type="email" class="form-control" name="email-address"
+                                        <input type="email" class="form-control" name="email"
                                                required autofocus>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-4 col-form-label text-md-right">Mật khẩu</label>
                                     <div class="col-md-6">
-                                        <input type="password" id="password" class="form-control" name="password"
+                                        <input type="password" class="form-control" name="password"
                                                required>
                                     </div>
                                 </div>
