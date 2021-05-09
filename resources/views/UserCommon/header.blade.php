@@ -68,4 +68,14 @@
             <i class="fa fa-bars"></i>
         </div>
     </div>
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form action="{{route('search')}}" method="get" class="search-model-form">
+                <input type="text" name="key" placeholder="Từ khóa tìm kiếm">
+            </form>
+        </div>
+    </div>
 </header>

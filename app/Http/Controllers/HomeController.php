@@ -81,8 +81,18 @@ class HomeController extends Controller
         return redirect()->route('login')->with('success', 'Tạo tài khoản thành công');
     }
 
-    public function getLogout(){
+    public function getLogout()
+    {
         Auth::logout();
         return redirect()->route('home');
+    }
+
+    public function search(Request $request)
+    {
+        $categorys = Category::where('parent_id', 0)->get();
+        $product = Product::where('name', 'like', '%' . $request->key . '%')
+            ->orWhere('price', $request->key)
+            ->get();
+        return view('home.search', compact('categorys','product'));
     }
 }

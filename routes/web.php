@@ -57,3 +57,8 @@ Route::get('/logout', [
     'as' => 'logout',
     'uses' =>'HomeController@getLogout'
 ]);
+
+Route::get('/search', [
+    'as' => 'search',
+    'uses' =>'HomeController@search'
+]);

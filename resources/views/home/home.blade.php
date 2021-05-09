@@ -25,13 +25,13 @@
                         <h4>Hàng mới về</h4>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8">
-                    <ul class="filter__controls">
-                        <li class="active" data-filter="*">Tất cả</li>
-                        <li data-filter=".women">Quần, áo</li>
-                        <li data-filter=".accessories">Phụ kiện</li>
-                    </ul>
-                </div>
+{{--                <div class="col-lg-8 col-md-8">--}}
+{{--                    <ul class="filter__controls">--}}
+{{--                        <li class="active" data-filter="*">Tất cả</li>--}}
+{{--                        <li data-filter=".women">Quần, áo</li>--}}
+{{--                        <li data-filter=".accessories">Phụ kiện</li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
             </div>
             <div class="row property__gallery">
                 @foreach($products as $product)
@@ -213,14 +213,4 @@
     </section>
     <!-- Discount Section End -->
 
-    <!-- Search Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Nhập từ khóa tìm kiếm">
-            </form>
-        </div>
-    </div>
-    <!-- Search End -->
 @endsection
