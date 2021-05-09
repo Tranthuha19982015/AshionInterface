@@ -75,13 +75,7 @@
                             <ul>
                                 <li>
                                     <span>Tình trạng:</span>
-                                    <div class="stock__checkbox">
-                                        <label for="stockin">
-                                            In Stock
-                                            <input type="checkbox" id="stockin">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                                    <p>Còn hàng</p>
                                 </li>
                                 <li>
                                     <span>Kích thước:</span>

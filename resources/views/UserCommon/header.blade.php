@@ -14,7 +14,7 @@
                 <nav class="header__menu">
                     <ul>
                         <li class="active"><a href="{{route('home')}}">Trang chủ</a></li>
-                        <li><a href="#">Sản phẩm</a>
+                        <li><a class="disabled_link" href="">Sản phẩm</a>
 
                             <ul class="dropdown">
                                 @foreach($categorys as $category)
