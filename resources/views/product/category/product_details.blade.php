@@ -122,7 +122,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <h6>Mô tả sản phẩm</h6>
-                                <p>{!! $product->content !!}}</p>
+                                <p>{!! $product->content !!}</p>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                                 <li><a href="{{config('app.base_url').$productItem->feature_image_path}}"
                                        class="image-popup"><span
                                             class="arrow_expand"></span></a></li>
-                                <li><a href="{{route('product-details',['id'=>$product->id])}}">
+                                <li><a href="{{route('product-details',['id'=>$productItem->id])}}">
                                         <span class="icon_info_alt"></span></a></li>
                                 <li><a href="#"><span class="icon_cart_alt"></span></a></li>
                             </ul>
