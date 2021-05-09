@@ -42,7 +42,7 @@ class HomeController extends Controller
 
         $credentials = array('email' => $request->email, 'password' => $request->password);
         if (Auth::attempt($credentials)) {
-            return redirect()->back()->with(['flag' => 'success', 'message' => 'Đăng nhập thành công']);
+            return redirect()->route('home')->with(['flag' => 'success', 'message' => 'Đăng nhập thành công']);
         } else {
             return redirect()->back()->with(['flag' => 'failed', 'message' => 'Đăng nhập thất bại']);
         }
@@ -78,6 +78,11 @@ class HomeController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->back()->with('success', 'Tạo tài khoản thành công');
+        return redirect()->route('login')->with('success', 'Tạo tài khoản thành công');
+    }
+
+    public function getLogout(){
+        Auth::logout();
+        return redirect()->route('home');
     }
 }

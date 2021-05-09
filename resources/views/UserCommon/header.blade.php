@@ -46,8 +46,13 @@
             <div class="col-lg-3">
                 <div class="header__right">
                     <div class="header__right__auth">
+                        @if(Auth::check())
+                            <a href="">Chào bạn {{Auth::user()->name}}</a>
+                            <a href="{{route('logout')}}">Đăng xuất</a>
+                        @else
                         <a href="{{route('login')}}">Đăng nhập</a>
                         <a href="{{route('register')}}">Đăng ký</a>
+                        @endif
                     </div>
 
                     <ul class="header__right__widget">
