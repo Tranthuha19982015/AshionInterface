@@ -1214,7 +1214,19 @@ ol {
 
 .product__item.sale .product__item__text .product__price {
 	color: #ca1515;
+
 }
+.product__price{
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.button_add_cart{
+border-color: #ca1515;
+    background-color: #ca1515;
+    color: white;
+}
+
 
 .product__item__pic {
 	height: 360px;
@@ -2252,7 +2264,22 @@ ol {
 	text-align: right;
 }
 
-.shop__cart__table tbody tr .cart__close span {
+.shop__cart__table tbody tr .cart__update a {
+    height: 45px;
+    width: 45px;
+    background: #f2f2f2;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #111111;
+    line-height: 44px;
+    text-align: center;
+    display: inline-block;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.shop__cart__table tbody tr .cart__close a {
 	height: 45px;
 	width: 45px;
 	background: #f2f2f2;
@@ -2358,7 +2385,7 @@ ol {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 10px;
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 .cart__total__procced .primary-btn {

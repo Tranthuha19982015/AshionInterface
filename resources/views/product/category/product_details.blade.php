@@ -33,7 +33,7 @@
                     <div class="product__details__pic">
                         <div class="product__details__pic__left product__thumb nice-scroll">
                             <a class="pt active" href="#product-1">
-                                <img src="" alt="123">
+{{--                                <img src="" alt="123">--}}
                             </a>
                         </div>
                         <div class="product__details__slider__content">
@@ -52,7 +52,7 @@
 {{--                        <p>{{$product->content}}</p>--}}
 
 {{--                        Them vao gio hang--}}
-                        <form action="{{route('cart')}}" method="post">
+                        <form action="" method="post">
                             @csrf
                         <div class="product__details__button">
                             <div class="quantity">
@@ -65,7 +65,7 @@
                             </div>
                             <a href="" class="cart-btn">
                                 <span class="icon_cart_alt"></span>
-                                <button type="submit"> Thêm vào giỏ hàng</button>
+                                <button class="button_add_cart" type="submit"> Thêm vào giỏ hàng</button>
                                </a>
                         </div>
                         </form>
@@ -75,7 +75,7 @@
                             <ul>
                                 <li>
                                     <span>Tình trạng:</span>
-                                    <p>Còn hàng</p>
+                                    <p>Còn {{$product->quantity}} sản phẩm</p>
                                 </li>
                                 <li>
                                     <span>Kích thước:</span>
