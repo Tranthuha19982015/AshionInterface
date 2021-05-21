@@ -12,11 +12,10 @@ class CartController extends Controller
     {
 //        session()->forget('cart');
 
-        $categorys = Category::where('parent_id', 0)->get();
         $product = Product::find($id);
         $cart = session()->get('cart');
         if (isset($cart[$id])) {
-            $cart[$id]['quantity'] += $cart[$id]['quantity'];
+            $cart[$id]['quantity'] = $cart[$id]['quantity'] + 1;
         } else {
             $cart[$id] = [
                 'name' => $product->name,
@@ -26,10 +25,9 @@ class CartController extends Controller
             ];
         }
         session()->put('cart', $cart);
-//        $carts = session()->get('cart');
-//        $showcart = view('cart.shopcart', compact('categorys', 'carts'))->render();
+//        dd(session()->get('cart'));
+
         return response()->json([
-//            'show_cart' => $showcart,
             'code' => 200
         ], 200);
     }
@@ -37,14 +35,9 @@ class CartController extends Controller
     public function showCart()
     {
         $categorys = Category::where('parent_id', 0)->get();
-        if(empty(session()->get('cart'))){
-            $carts = session()->get('cart',0);
-            return view('cart.shopcart', compact('categorys', 'carts'));
-        }
-        else{
-            $carts = session()->get('cart');
-            return view('cart.shopcart', compact('categorys', 'carts'));
-        }
+        $carts = session()->get('cart');
+        return view('cart.shopcart', compact('categorys', 'carts'));
+
 
     }
 
@@ -63,7 +56,8 @@ class CartController extends Controller
         }
     }
 
-    public function deleteCart(Request $request){
+    public function deleteCart(Request $request)
+    {
         if ($request->id) {
             $carts = session()->get('cart');
             unset($carts[$request->id]);

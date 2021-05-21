@@ -17,5 +17,5 @@ function addTocart(event) {
 }
 
 $(function () {
-    $('.add_to_cart').on('click', addTocart)
+    $(document).on('click','.add_to_cart', addTocart)
 });

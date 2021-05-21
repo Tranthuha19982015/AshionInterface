@@ -40,7 +40,8 @@
                                     <li><a href="{{route('product-details',['id'=>$product->id])}}">
                                             <span class="icon_info_alt"></span></a></li>
 
-                                    <li><a href="{{route('addTocart',['id'=>$product->id])}}" data-url="">
+                                    <li><a href="{{route('addTocart',['id'=>$product->id])}}"
+                                           data-url="">
                                             <span class="icon_cart_alt add_to_cart"></span></a></li>
                                 </ul>
                             </div>
