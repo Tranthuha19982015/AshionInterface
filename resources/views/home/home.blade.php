@@ -9,13 +9,11 @@
 
 @section('js')
     <script src="{{asset('home/home.js')}}"></script>
-{{--    <script src="{{asset('home/process_cart.js')}}"></script>--}}
 @endsection
 
 @section('content')
     <!-- Slider -->
     @include('home.components.slider')
-    <!-- Slider -->
 
     <!-- Product Section Begin -->
     <section class="product spad">

@@ -85,7 +85,8 @@
                                             @endphp
 
                                             <li>{{$cartItem['name']}} x {{$cartItem['quantity']}}
-                                                <span> {{@number_format($cartItem['price']*$cartItem['quantity'],0)}}</span></li>
+                                                <span> {{@number_format($cartItem['price']*$cartItem['quantity'],0)}}</span>
+                                            </li>
                                         @endforeach
                                     @endif
                                 </ul>
