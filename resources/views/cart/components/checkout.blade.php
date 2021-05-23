@@ -27,12 +27,12 @@
     <!-- Checkout Section Begin -->
     <section class="checkout spad">
         <div class="container">
-{{--            <div class="row">--}}
-{{--                <div class="col-lg-12">--}}
-{{--                    <h6 class="coupon__link"></h6>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-            <form action="#" class="checkout__form" method="post">
+            {{--            <div class="row">--}}
+            {{--                <div class="col-lg-12">--}}
+            {{--                    <h6 class="coupon__link"></h6>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
+            <form action="{{route('postCheckout')}}" class="checkout__form" method="post">
                 @csrf
                 <div class="row">
                     <div class="col-lg-8">
@@ -56,13 +56,13 @@
                                     <input type="text" name="address" placeholder="Địa chỉ giao hàng">
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="checkout__form__input">
-                                    <p>Ghi chú</p>
-                                    <input type="text" name="note"
-                                           placeholder="Lưu ý cho chủ cửa hàng...">
-                                </div>
-                            </div>
+                            {{--                            <div class="col-lg-12">--}}
+                            {{--                                <div class="checkout__form__input">--}}
+                            {{--                                    <p>Ghi chú</p>--}}
+                            {{--                                    <input type="text" name="note"--}}
+                            {{--                                           placeholder="Lưu ý cho chủ cửa hàng...">--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -86,7 +86,9 @@
                                             @endphp
 
                                             <li>{{$cartItem['name']}} x {{$cartItem['quantity']}}
-                                                <span> {{@number_format($cartItem['price']*$cartItem['quantity'],0)}}</span>
+                                                <span>
+                                                    <input type="hidden" name="quantity" value="{{$cartItem['price']}}">
+                                                    {{@number_format($cartItem['price']*$cartItem['quantity'],0)}}</span>
                                             </li>
                                         @endforeach
                                     @endif
@@ -96,22 +98,26 @@
                                 <ul>
                                     <li>Tổng tiền hàng <span>{{@number_format($total,0)}}</span></li>
                                     <li>Phí vận chuyển <span>30.000</span></li>
-                                    <li>Tổng thanh toán <span>{{@number_format($total+30000,0)}}</span></li>
+                                    <li>Tổng thanh toán
+                                        <span>{{@number_format($total+30000,0)}}
+                                            <input type="hidden" name="total" value="{{$total+30000}}">
+                                        </span>
+                                    </li>
                                 </ul>
                             </div>
-{{--                            <div class="checkout__order__widget">--}}
-{{--                                <label for="check-payment">--}}
-{{--                                    Cheque payment--}}
-{{--                                    <input type="checkbox" id="check-payment">--}}
-{{--                                    <span class="checkmark"></span>--}}
-{{--                                </label>--}}
-{{--                                <label for="paypal">--}}
-{{--                                    PayPal--}}
-{{--                                    <input type="checkbox" id="paypal">--}}
-{{--                                    <span class="checkmark"></span>--}}
-{{--                                </label>--}}
-{{--                            </div>--}}
-                            <button type="submit" class="site-btn">Đặt hàng</button>
+                            <div class="checkout__order__widget">
+                                <label>
+                                    Thanh toán khi nhận hàng
+                                    <input type="checkbox" name="payment">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label>
+                                    Chuyển khoản
+                                    <input type="checkbox" name="transfer">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <button type="submit" name="btn_order" class="site-btn">Đặt hàng</button>
                         </div>
                     </div>
                 </div>

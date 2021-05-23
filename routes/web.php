@@ -43,7 +43,7 @@ Route::get('/checkout', [
     'uses' => 'CartController@checkout'
 ]);
 
-Route::get('/postcheckout', [
+Route::post('/postcheckout', [
     'as' => 'postCheckout',
     'uses' => 'CartController@postCheckout'
 ]);
