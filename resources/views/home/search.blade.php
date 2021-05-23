@@ -28,7 +28,8 @@
                                            class="image-popup"><span
                                                 class="arrow_expand"></span></a></li>
                                     <li><a href="{{route('product-details',['id'=>$product->id])}}"><span class="icon_info_alt"></span></a></li>
-                                    <li><a href="#"><span class="icon_cart_alt"></span></a></li>
+                                    <li><a href="{{route('addTocart',['id'=>$product->id])}}">
+                                            <span class="icon_cart_alt"></span></a></li>
                                 </ul>
                             </div>
                             <div class="product__item__text">

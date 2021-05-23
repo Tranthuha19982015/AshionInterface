@@ -58,10 +58,9 @@
                                     <input name="qty" type="text" value="1">
                                 </div>
                             </div>
-                            <a href="#" class="cart-btn">
+                            <a href="{{route('addTocart',['id'=>$product->id])}}" class="cart-btn">
                                 <span class="icon_cart_alt"></span> Thêm vào giỏ hàng</a>
                         </div>
-                        {{-------------------------}}
 
                         <div class="product__details__widget">
                             <ul>
