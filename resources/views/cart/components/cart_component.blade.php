@@ -61,7 +61,13 @@
         <div class="col-lg-3 offset-lg-9">
             <div class="cart__total__procced">
                 <h6>Tổng <span>{{@number_format($total,0)}} VND</span></h6>
-                <a href="#" class="primary-btn">Thanh toán</a>
+
+                @if(Auth::check() && Session::has('cart'))
+                    <a href="{{route('checkout')}}" class="primary-btn">Thanh toán</a>
+                @else
+                    <a href="{{route('login')}}" class="primary-btn">Thanh toán</a>
+                @endif
+
             </div>
         </div>
 

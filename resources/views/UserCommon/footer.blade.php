@@ -4,35 +4,26 @@
             <div class="col-lg-4 col-md-6 col-sm-7">
                 <div class="footer__about">
                     <div class="footer__logo">
-                        <a href="./index.html"><img src="{{asset('ashionshop/img/logo.png')}}" alt=""></a>
+                        <a href="{{route('home')}}"><img src="{{asset('ashionshop/img/logo.png')}}" alt=""></a>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        cilisis.</p>
-                    <div class="footer__payment">
-                        <a href="#"><img src="{{asset('ashionshop/img/payment/payment-1.png')}}" alt=""></a>
-                        <a href="#"><img src="{{asset('ashionshop/img/payment/payment-2.png')}}" alt=""></a>
-                    </div>
+                    <p> Ashion hy vọng sẽ mang đến sự phục vụ chu đáo cho tất cả các khách hàng.
+                        Cửa hàng thời trang Ashion luôn luôn lắng nghe những ý kiến đóng góp
+                        từ các khách hàng với mục tiêu đẩy mạnh dịch vụ, mở rộng hệ thống và làm hài
+                        lòng những vị khách trên toàn quốc.</p>
+{{--                    <div class="footer__payment">--}}
+{{--                        <a href="#"><img src="{{asset('ashionshop/img/payment/payment-1.png')}}" alt=""></a>--}}
+{{--                        <a href="#"><img src="{{asset('ashionshop/img/payment/payment-2.png')}}" alt=""></a>--}}
+{{--                    </div>--}}
                 </div>
             </div>
-            <div class="col-lg-2 col-md-3 col-sm-5">
+            <div class="col-lg-4 col-md-3 col-sm-5">
                 <div class="footer__widget">
                     <h6>Quick links</h6>
                     <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-                <div class="footer__widget">
-                    <h6>Account</h6>
-                    <ul>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Orders Tracking</a></li>
-                        <li><a href="#">Checkout</a></li>
-                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Hình thức thanh toán</a></li>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,13 +34,6 @@
                         <input type="text" placeholder="Email">
                         <button type="submit" class="site-btn">Subscribe</button>
                     </form>
-                    <div class="footer__social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -59,8 +43,7 @@
                 <div class="footer__copyright__text">
                     <p>Copyright &copy;
                         <script>document.write(new Date().getFullYear());</script>
-                        All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i>
-                        by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        Ha</p>
                 </div>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </div>

@@ -38,6 +38,16 @@ Route::get('/delete-cart', [
     'uses' => 'CartController@deleteCart'
 ]);
 
+Route::get('/checkout', [
+    'as' => 'checkout',
+    'uses' => 'CartController@checkout'
+]);
+
+Route::get('/postcheckout', [
+    'as' => 'postCheckout',
+    'uses' => 'CartController@postCheckout'
+]);
+
 //////////////////////
 
 Route::get('/login', [

@@ -49,26 +49,18 @@
                         <h3>{{$product->name}}</h3>
 
                         <div class="product__details__price">{{@number_format($product->price,0)}} VND</div>
-{{--                        <p>{{$product->content}}</p>--}}
 
 {{--                        Them vao gio hang--}}
-                        <form action="" method="post">
-                            @csrf
                         <div class="product__details__button">
                             <div class="quantity">
                                 <span>Số lượng:</span>
                                 <div class="pro-qty">
                                     <input name="qty" type="text" value="1">
-                                    <input name="id_hidden" type="hidden"
-                                    value="{{$product->id}}">
                                 </div>
                             </div>
-                            <a href="" class="cart-btn">
-                                <span class="icon_cart_alt"></span>
-                                <button class="button_add_cart" type="submit"> Thêm vào giỏ hàng</button>
-                               </a>
+                            <a href="#" class="cart-btn">
+                                <span class="icon_cart_alt"></span> Thêm vào giỏ hàng</a>
                         </div>
-                        </form>
                         {{-------------------------}}
 
                         <div class="product__details__widget">

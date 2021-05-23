@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href=""><i class="fa fa-home"></i> Trang chủ</a>
+                        <a href=""><i class="icon_house"></i> Trang chủ</a>
                         <span>Giỏ hàng</span>
                     </div>
                 </div>

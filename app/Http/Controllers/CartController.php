@@ -70,4 +70,14 @@ class CartController extends Controller
             ], 200);
         }
     }
+
+    public function checkout(){
+        $categorys = Category::where('parent_id', 0)->get();
+        $carts = session()->get('cart');
+        return view('cart.components.checkout',compact('categorys','carts'));
+    }
+
+    public function postCheckout(){
+        $categorys = Category::where('parent_id', 0)->get();
+    }
 }
