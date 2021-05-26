@@ -96,7 +96,7 @@
                             </div>
                             <div class="checkout__order__total">
                                 <ul>
-                                    <li>Tổng tiền hàng <span>{{@number_format($total,0)}}</span></li>
+                                    <li>Tạm tính <span>{{@number_format($total,0)}}</span></li>
                                     <li>Phí vận chuyển <span>30.000</span></li>
                                     <li>Tổng thanh toán
                                         <span>{{@number_format($total+30000,0)}}
@@ -105,18 +105,18 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="checkout__order__widget">
-                                <label>
-                                    Thanh toán khi nhận hàng
-                                    <input type="checkbox" name="payment">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label>
-                                    Chuyển khoản
-                                    <input type="checkbox" name="transfer">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
+{{--                            <div class="checkout__order__widget">--}}
+{{--                                <label>--}}
+{{--                                    Thanh toán khi nhận hàng--}}
+{{--                                    <input type="checkbox" name="payment">--}}
+{{--                                    <span class="checkmark"></span>--}}
+{{--                                </label>--}}
+{{--                                <label>--}}
+{{--                                    Chuyển khoản--}}
+{{--                                    <input type="checkbox" name="transfer">--}}
+{{--                                    <span class="checkmark"></span>--}}
+{{--                                </label>--}}
+{{--                            </div>--}}
                             <button type="submit" name="btn_order" class="site-btn">Đặt hàng</button>
                         </div>
                     </div>

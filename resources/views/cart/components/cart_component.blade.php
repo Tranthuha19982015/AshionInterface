@@ -47,7 +47,8 @@
                                     <a href="" data-id="{{$id}}" class="icon_refresh cart_update"></a>
                                 </td>
                                 <td class="cart__close">
-                                    <a href="" data-id="{{$id}}" class="icon_close cart_delete"></a>
+                                    <a href="" data-id="{{$id}}"
+                                       class="icon_close cart_delete"></a>
                                 </td>
                             </tr>
 

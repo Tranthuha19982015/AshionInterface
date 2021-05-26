@@ -10,6 +10,8 @@ use App\Product;
 use App\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\View;
 
 class CartController extends Controller
 {
@@ -23,7 +25,7 @@ class CartController extends Controller
         $this->order_details = $orderDetail;
     }
 
-    public function addToCart($id)
+    public function addToCart($id, Request $request)
     {
         $product = Product::find($id);
         $cart = session()->get('cart');
@@ -39,8 +41,8 @@ class CartController extends Controller
             ];
         }
         session()->put('cart', $cart);
-
-        return redirect()->route('showCart');
+        return Redirect::back();
+//        return redirect()->route('showCart');
     }
 
     public function showCart()

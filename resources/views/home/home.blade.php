@@ -39,7 +39,7 @@
                                             <span class="icon_info_alt"></span></a></li>
 
                                     <li><a href="{{route('addTocart',['id'=>$product->id])}}"
-                                           data-url="">
+                                           onclick="return alert('Thêm vào giỏ hàng thành công!')">
                                             <span class="icon_cart_alt add_to_cart"></span></a></li>
                                 </ul>
                             </div>
@@ -79,7 +79,7 @@
                                             <span class="icon_info_alt"></span></a></li>
 
                                     <li><a href="{{route('addTocart',['id'=>$product->id])}}"
-                                           data-url="">
+                                           onclick="return alert('Thêm vào giỏ hàng thành công!')">
                                             <span class="icon_cart_alt add_to_cart"></span></a></li>
                                 </ul>
                             </div>

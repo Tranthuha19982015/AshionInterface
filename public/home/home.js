@@ -6,6 +6,7 @@ function addTocart(event) {
         url: urlCart,
         dataType: 'json',
         success: function (data) {
+            console.log('dfdsfdsf');
             if (data.code === 200) {
                 alert('Thêm thành công')
             }

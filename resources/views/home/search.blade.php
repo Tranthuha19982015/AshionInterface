@@ -27,8 +27,10 @@
                                     <li><a href="{{config('app.base_url').$product->feature_image_path}}"
                                            class="image-popup"><span
                                                 class="arrow_expand"></span></a></li>
-                                    <li><a href="{{route('product-details',['id'=>$product->id])}}"><span class="icon_info_alt"></span></a></li>
-                                    <li><a href="{{route('addTocart',['id'=>$product->id])}}">
+                                    <li><a href="{{route('product-details',['id'=>$product->id])}}">
+                                            <span class="icon_info_alt"></span></a></li>
+                                    <li><a href="{{route('addTocart',['id'=>$product->id])}}"
+                                           onclick="return alert('Thêm vào giỏ hàng thành công!')">
                                             <span class="icon_cart_alt"></span></a></li>
                                 </ul>
                             </div>
