@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-7">
+            <div class="col-lg-6">
                 <div class="footer__about">
                     <div class="footer__logo">
                         <a href="{{route('home')}}"><img src="{{asset('ashionshop/img/logo.png')}}" alt=""></a>
@@ -16,9 +16,9 @@
 {{--                    </div>--}}
                 </div>
             </div>
-            <div class="col-lg-4 col-md-3 col-sm-5">
+            <div class="col-lg-3">
                 <div class="footer__widget">
-                    <h6>Quick links</h6>
+                    <h6>Hỗ trợ khách hàng</h6>
                     <ul>
                         <li><a href="#">Hướng dẫn mua hàng</a></li>
                         <li><a href="#">Hình thức thanh toán</a></li>
@@ -27,13 +27,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-8 col-sm-8">
-                <div class="footer__newslatter">
-                    <h6>NEWSLETTER</h6>
-                    <form action="#">
-                        <input type="text" placeholder="Email">
-                        <button type="submit" class="site-btn">Subscribe</button>
-                    </form>
+            <div class="col-lg-3">
+                <div class="footer__widget">
+                    <h6>Phí ship toàn quốc</h6>
+                    <ul>
+                        <li><a href="#">30,000 VND</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
