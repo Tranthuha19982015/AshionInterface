@@ -1,7 +1,3 @@
-@section('js')
-    <script src="{{asset('home/home.js')}}"></script>
-@endsection
-
 <header class="header fixed-top">
     <div class="container-fluid">
         <div class="row">

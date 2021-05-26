@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="{{asset('home/home.css')}}">
 @endsection
 
-@section('js')
-    <script src="{{asset('home/home.js')}}"></script>
-@endsection
-
 @section('content')
     <!-- Slider -->
     @include('home.components.slider')
