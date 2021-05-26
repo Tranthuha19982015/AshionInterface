@@ -1334,8 +1334,9 @@ border-color: #ca1515;
 	transform: rotate(0);
 	-webkit-transition: all, 0.3s;
 	-o-transition: all, 0.3s;
-	transition: all, 0.3s;
+	transition: all, 0.2s;
 	display: inline-block;
+    padding-top: 13px;
 }
 
 .product__item__text {

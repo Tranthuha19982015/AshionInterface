@@ -50,13 +50,13 @@
                         <a href="{{route('register')}}">Đăng ký</a>
                         @endif
                     </div>
-
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>
                         <li><a href="{{route('showCart')}}"><span class="icon_cart_alt"></span>
                                 <div class="tip">
                                     @if(Session::has('cart'))
                                     {{count(Session::get('cart'))}}
+                                    @else 0
                                     @endif
                                 </div>
                             </a></li>

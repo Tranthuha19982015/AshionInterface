@@ -29,7 +29,7 @@
                             <tr>
                                 <td class="cart__product__item">
                                     <img src="{{config('app.base_url').$cartItem['image']}}" alt="1234"
-                                         style="width: 70px; height: 80px">
+                                         style="max-width: 10%; max-height: 10%;">
                                     <div class="cart__product__item__title">
                                         <h6> {{$cartItem['name']}}</h6>
                                     </div>
