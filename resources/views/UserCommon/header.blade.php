@@ -54,7 +54,11 @@
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>
                         <li><a href="{{route('showCart')}}"><span class="icon_cart_alt"></span>
-{{--                                <div class="tip">2</div>--}}
+                                <div class="tip">
+                                    @if(Session::has('cart'))
+                                    {{count(Session::get('cart'))}}
+                                    @endif
+                                </div>
                             </a></li>
                     </ul>
                 </div>
