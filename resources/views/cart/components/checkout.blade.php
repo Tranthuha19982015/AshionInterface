@@ -56,13 +56,6 @@
                                     <input type="text" name="address" placeholder="Địa chỉ giao hàng">
                                 </div>
                             </div>
-                            {{--                            <div class="col-lg-12">--}}
-                            {{--                                <div class="checkout__form__input">--}}
-                            {{--                                    <p>Ghi chú</p>--}}
-                            {{--                                    <input type="text" name="note"--}}
-                            {{--                                           placeholder="Lưu ý cho chủ cửa hàng...">--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -117,7 +110,9 @@
 {{--                                    <span class="checkmark"></span>--}}
 {{--                                </label>--}}
 {{--                            </div>--}}
-                            <button type="submit" name="btn_order" class="site-btn">Đặt hàng</button>
+                            <button type="submit" name="btn_order"
+                                    onclick="return alert('Đặt hàng thành công!')"
+                                    class="site-btn">Đặt hàng</button>
                         </div>
                     </div>
                 </div>

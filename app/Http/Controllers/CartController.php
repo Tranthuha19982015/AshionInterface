@@ -115,7 +115,6 @@ class CartController extends Controller
                     'product_id' => $cartItem['id'],
                     'order_quantity' => $cartItem['quantity']
                 ];
-
                 $this->order_details->create($dataInsertOrderDetail);
             }
             session()->forget('cart');
