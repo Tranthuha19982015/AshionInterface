@@ -9,7 +9,6 @@
 
 @section('content')
 
-    <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
         <div class="container">
             <div class="row">
@@ -22,16 +21,9 @@
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
 
-    <!-- Checkout Section Begin -->
     <section class="checkout spad">
         <div class="container">
-            {{--            <div class="row">--}}
-            {{--                <div class="col-lg-12">--}}
-            {{--                    <h6 class="coupon__link"></h6>--}}
-            {{--                </div>--}}
-            {{--            </div>--}}
             <form action="{{route('postCheckout')}}" class="checkout__form" method="post">
                 @csrf
                 <div class="row">

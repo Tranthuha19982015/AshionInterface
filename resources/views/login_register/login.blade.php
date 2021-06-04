@@ -39,16 +39,6 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-md-6 offset-md-4">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="remember"> Nhớ mật khẩu
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
                                     <a class="col-md-9 col-form-label text-md-right" href="{{route('register')}}">
                                         Bạn chưa có tài khoản? Đăng ký!</a>
                                 </div>
