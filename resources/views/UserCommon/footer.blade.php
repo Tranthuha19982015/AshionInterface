@@ -41,7 +41,7 @@
                 <div class="footer__copyright__text">
                     <p>Copyright &copy;
                         <script>document.write(new Date().getFullYear());</script>
-                        Ha</p>
+                        Phuong</p>
                 </div>
             </div>
         </div>
